@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  node:
+    build: ./node
+    restart: on-failure
+    ports:
+      - "8794:3000"
+    # networks:
+    #   - ng-ab-network
+
+# networks:
+#   bylaws:
+#     name: ng-ab-network
