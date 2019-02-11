@@ -2,12 +2,21 @@
   "name": "ng-ad",
   "version": "0.1.0",
   "description": "",
-  "main": "api.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api.js"
+    "start": "node server.js"
   },
-  "author": "",
+  "keywords": [
+    "node",
+    "express",
+    "api"
+  ],
+  "author": {
+    "name": "Marcus N. Jones",
+    "email": "marcusnjones@gmail.com",
+    "url": "https://www.linkedin.com/in/marcusnjones/"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"

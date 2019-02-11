@@ -5,10 +5,21 @@ services:
     build: ./node
     restart: on-failure
     ports:
-      - "8794:3000"
+      - "3794:3000"
+    env_file: ./node/node.env
+    # volumes:
+    #   - .node/api:/usr/src/app
+    # networks:
+    #   - ng-ab-network
+  # sql:
+  #   build: ./sql
+  #   restart: on-failure
+  #   ports:
+  #     - "3306:3306"
+  #   env_file: ./sql/sql.env
     # networks:
     #   - ng-ab-network
 
 # networks:
-#   bylaws:
+#   ng-ad:
 #     name: ng-ab-network
