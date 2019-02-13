@@ -1,7 +1,5 @@
 # https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
-# TODO: Add nodemon
-
 FROM node:9
 
 # Create app directory
@@ -16,7 +14,7 @@ RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
 
-COPY api/* ./
+COPY api/ ./
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
