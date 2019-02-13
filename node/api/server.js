@@ -1,5 +1,4 @@
 // https://nodejs.org/docs/latest-v9.x/api/synopsis.html
-'use strict';
 
 const http = require('http');
 const app = require('./app');
