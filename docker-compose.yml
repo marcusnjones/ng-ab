@@ -13,23 +13,23 @@ services:
     networks:
       - ng-ab-network
 
-  # sql:
-  #   build: ./sql
-  #   command: --default-authentication-plugin=mysql_native_password
-  #   restart: on-failure
-  #   ports:
-  #       - "1002:3306"
-  #   env_file: ./sql/sql.env
-  #   networks:
-  #     - ng-ab-network
+  sql:
+    build: ./sql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: on-failure
+    ports:
+        - "1001:3306"
+    env_file: ./sql/sql.env
+    networks:
+      - ng-ab-network
 
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 1001:8080
-  #   networks:
-  #     - ng-ab-network
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 1002:8080
+    networks:
+      - ng-ab-network
 
 
 networks:
