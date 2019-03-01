@@ -14,7 +14,7 @@ RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
 
-COPY api/ ./
+COPY src/ ./
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
