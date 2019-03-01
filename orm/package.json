@@ -1,0 +1,30 @@
+{
+   "name": "ng-ab-orm",
+   "version": "0.1.0",
+   "description": "",
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [
+      "node",
+      "typeorm",
+      "orm"
+   ],
+   "author": {
+      "name": "Marcus N. Jones",
+      "email": "marcusnjones@gmail.com",
+      "url": "https://www.linkedin.com/in/marcusnjones/"
+   },
+   "license": "ISC",
+   "devDependencies": {
+      "ts-node": "3.3.0",
+      "@types/node": "^8.0.29",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "typeorm": "0.2.14",
+      "reflect-metadata": "^0.1.10",
+      "mysql": "^2.14.1"
+   }
+}

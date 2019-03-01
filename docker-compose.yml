@@ -2,32 +2,40 @@ version: '3.7'
 
 services:
 
-  node:
-    build: ./node
+  api:
+    build: ./api
     restart: on-failure
     ports:
       - "1000:3000"
-    env_file: ./node/node.env
-    # volumes:
-    #   - ./node/api:/usr/src/app
+    env_file: ./api/api.env
     networks:
       - ng-ab-network
 
-  sql:
-    build: ./sql
+  db:
+    build: ./db
     command: --default-authentication-plugin=mysql_native_password
     restart: on-failure
     ports:
         - "1001:3306"
-    env_file: ./sql/sql.env
+    env_file: ./db/db.env
     networks:
       - ng-ab-network
 
   adminer:
     image: adminer
     restart: always
+    depends_on:
+      - db
     ports:
       - 1002:8080
+    networks:
+      - ng-ab-network
+
+  orm:
+    build: ./orm
+    restart: always
+    depends_on:
+      - db
     networks:
       - ng-ab-network
 
