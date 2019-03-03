@@ -2,21 +2,29 @@ version: '3.7'
 
 services:
 
+  ng:
+    build: ./ng
+    restart: always
+    ports:
+      - "4200:4200"
+    networks:
+      - ng-ab-network
+
   api:
     build: ./api
     restart: on-failure
     ports:
-      - "1000:3000"
+      - "3000:3000"
     env_file: ./api/api.env
     networks:
       - ng-ab-network
 
   db:
-    build: ./db
+    image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: on-failure
     ports:
-        - "1001:3306"
+        - "3636:3306"
     env_file: ./db/db.env
     networks:
       - ng-ab-network
@@ -27,7 +35,7 @@ services:
     depends_on:
       - db
     ports:
-      - 1002:8080
+      - "8080:8080"
     networks:
       - ng-ab-network
 
