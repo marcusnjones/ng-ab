@@ -17,7 +17,6 @@ COPY src/ ./src
 COPY dist/ ./dist
 COPY e2e/ ./e2e
 
-EXPOSE 3000
 EXPOSE 4200
 
-RUN  ["npm", "start"]
+CMD  ["npm", "start"]
