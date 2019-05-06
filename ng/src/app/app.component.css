@@ -1,0 +1,77 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.app-header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container, .logo-container {
+    line-height: 1.5em;
+}
+
+.search-container label {
+    margin-right: 5px;
+}
+
+.logo {
+    margin: 0;
+}
+
+.app-body {
+    height: 80vh;
+    border: 1px solid #e1e4e8;
+}
+
+#entries {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#entries thead {
+    background-color: #f1f8ff;
+}
+
+#entries thead tr th {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+#entries thead tr th:nth-child(1),
+#entries thead tr th:nth-child(2),
+#entries thead tr th:nth-child(3),
+#entries thead tr th:nth-child(5) {
+    width: 20%;
+}
+
+#entries thead tr th:nth-child(4) {
+    width: 40%;
+}
+
+#entries tbody tr {
+    line-height: 1.5em;
+    border: 1px solid #e1e4e8;
+}
+
+#entries tbody tr:nth-child(odd) {
+    background-color: #f6f8fa;
+}
+
+#entries tbody tr td {
+    overflow: auto;
+}
+
+#entries tbody tr .action-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#entries tbody tr .action-list li {
+    margin-right: 5px;
+    display: inline-flex;
+}
