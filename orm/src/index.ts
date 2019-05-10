@@ -1,13 +1,13 @@
 import "reflect-metadata";
 import {createConnection} from "typeorm";
-import {Entries} from "./entity/Entries";
+import {Entry} from "./entity/Entry";
 
 createConnection().then(async connection => {
 
     console.log("Seeding database...");
     const data = require("./seed.json");
     data.forEach(async (item) => {
-        const entry = new Entries();
+        const entry = new Entry();
             entry.firstName = item.firstName;
             entry.lastName = item.lastName;
             entry.email = item.email;
