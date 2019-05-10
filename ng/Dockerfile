@@ -14,7 +14,7 @@ RUN npm install
 # # RUN npm install --only=production
 
 COPY src/ ./src
-COPY dist/ ./dist
+# COPY dist/ ./dist
 COPY e2e/ ./e2e
 
 EXPOSE 4200
