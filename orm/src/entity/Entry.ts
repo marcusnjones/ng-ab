@@ -1,10 +1,16 @@
-import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn,UpdateDateColumn} from "typeorm";
+import {
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    CreateDateColumn,
+    UpdateDateColumn
+} from 'typeorm';
 
 @Entity()
-export class Entries {
+export class Entry {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
     @CreateDateColumn()
     dateCreated: Date;
