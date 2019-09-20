@@ -13,8 +13,12 @@ services:
   api:
     build: ./api
     restart: on-failure
+    volumes:
+      - ./api/src:/usr/src/app
+      - /usr/src/app/node_modules # prevent overriding of deps on image build
     ports:
       - "3000:3000"
+      - "9229:9229" # for debugging
     env_file: ./api/api.env
     networks:
       - ng-ab-network
